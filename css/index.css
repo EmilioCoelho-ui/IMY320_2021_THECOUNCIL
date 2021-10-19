@@ -93,7 +93,7 @@ div#header:after
     color: gold;
     font-size: 60px;
     /*
-    font-family: Azeret;
+    font-family: 'Azeret';
     */
     background-color: #1f2124;
     top: 0;
@@ -114,4 +114,20 @@ div#header:after
 .text {
     /*float: right;*/
     text-align: center;
+}
+
+/******************* AOS SCROLL ANIMATION ********************/
+* {
+    box-sizing: border-box;
+}
+
+.item {
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    padding-top: 75px;
+    background: #ccc;
+    text-align: center;
+    color: #FFF;
+    font-size: 3em;
 }
