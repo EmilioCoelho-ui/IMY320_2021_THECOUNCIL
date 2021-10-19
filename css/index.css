@@ -1,15 +1,14 @@
 body {
     margin: 0;
     background-color: black;
+    /*
     background-image: url('../img/safe.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 70% 100%;
     background-position: center;
-}
 
-h1{
-    color: blue;
+     */
 }
 
 div#header
@@ -31,7 +30,7 @@ div#header:after
     position:absolute;
     top:0;
     right:-5px;
-    background:none #3476A9;
+
     -webkit-transform: skew(-20deg);
     -moz-transform: skew(-20deg);
     -o-transform: skew(-20deg);
@@ -130,4 +129,17 @@ div#header:after
     text-align: center;
     color: #FFF;
     font-size: 3em;
+}
+
+.image {
+    background-image: url('../img/safe.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 70% 100%;
+    background-position: center;
+    text-align: center;
+    color: gold;
+    height: 500px;
+    font-size: 3em;
+    padding: 70px;
 }
