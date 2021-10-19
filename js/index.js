@@ -17,6 +17,8 @@ let camera;
 let myCanvas;
 let controls;
 let loader;
+let obj;
+let render;
 
 function main() {
     //Scene
@@ -47,16 +49,9 @@ function main() {
     // Object loader
     loader = new THREE.OBJLoader();
     loader.load(
-        urlValue,
+        '../assets/model/horror-from-the-sky/source/horror.obj',
         function ( object ) {
             obj = object;
-
-            object.traverse( function ( child ) {
-                if ( child.isMesh ) {
-                    child.material.map = texture; // assign your diffuse texture here
-                }
-            } );
-
             scene.add( object );
         },
         // called when loading is in progresses
@@ -69,4 +64,14 @@ function main() {
             console.log( error);
         }
     );
+
+    // Render
+    render = function () {
+        requestAnimationFrame(render);
+        controls.update();
+        renderer.render(scene, camera);
+    }
+    render();
 }
+
+main();
