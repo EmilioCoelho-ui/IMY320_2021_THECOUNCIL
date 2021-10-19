@@ -13,16 +13,6 @@ body {
     margin: 0;
     background-color: black;
 }
-/*
-.navbar {
-    color: gold;
-    font-size: 60px;
-    font-family: Azeret;
-    background-color: #1f2124;
-    top: 0px;
-    width: 100%;
-}
- */
 
 .burger-menu {
     /*font-size: 70px;*/
@@ -41,7 +31,7 @@ body {
     text-align: center;
 }
 
-.outercontainer {
+.outer-container {
     width: 300px;
     height: 150px;
     background-color: #AB7342;
@@ -51,12 +41,12 @@ body {
     transition: transform .5s; /* Animation */
 }
 
-.outercontainer:hover {
+.outer-container:hover {
     transform: scale(1.1);
 }
 
 
-.innercontainer {
+.inner-container {
     width: 250px;
     height: 30px;
     margin: auto;
@@ -82,9 +72,11 @@ body {
     text-align: center;
 }
 
-.safecircle {
+.safe-circle {
     padding: 50px;
+    /*
     height: device-width;
+    */
     width: 1100px;
     border-radius: 50%;
     background-color: whitesmoke;
