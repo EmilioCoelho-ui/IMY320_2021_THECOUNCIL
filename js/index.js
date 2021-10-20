@@ -25,11 +25,11 @@ function main() {
     scene = new THREE.Scene();
 
     // Camera
-    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
     // larger the number the further away it is
-    camera.position.z = 80; // Setting the camera position
-    camera.position.y = 0;
-    camera.position.x = 110;
+    camera.position.y = 1;
+    camera.position.z = 1;
+    camera.position.x = 10;
 
     // Canvas
     myCanvas = document.getElementById("myCanvas");
@@ -46,12 +46,40 @@ function main() {
     light.position.set(10, 0, 25);
     scene.add(light);
 
+    // Texture
+    let texture1 = new THREE.TextureLoader().load('../assets/model/obj/textures/Eye_D.jpg');
+    let texture2 = new THREE.TextureLoader().load('../assets/model/obj/textures/Eye_N.jpg');
+    let texture3 = new THREE.TextureLoader().load('../assets/model/obj/textures/REF 1.jpg');
+    //const textures  = [texture1, texture2, texture3];
+
+
     // Object loader
+    let mat;
+    let mtlLoader = new THREE.MTLLoader();
+    mtlLoader.load(
+        '../assets/model/obj/eyeball.mtl',
+        function ( materials ) {
+            materials.preload();
+            mat = materials;
+        }
+    );
+
     loader = new THREE.OBJLoader();
+    loader.setMaterials(mat);
     loader.load(
-        '../assets/model/horror-from-the-sky/source/horror.obj',
+        '../assets/model/obj/eyeball.obj',
         function ( object ) {
             obj = object;
+
+            /*
+            object.traverse( function ( child ) {
+                if ( child.isMesh ) {
+                    child.material.map = texture1; // assign your diffuse texture here
+                }
+            } );
+
+             */
+
             scene.add( object );
         },
         // called when loading is in progresses
@@ -65,9 +93,39 @@ function main() {
         }
     );
 
+
+
+    /*
+    let mesh = null;
+
+    let mtlLoader = new THREE.MTLLoader();
+    mtlLoader.setPath( '../assets/model/obj/' );
+    mtlLoader.load( 'eyeball.mtl', function( materials ) {
+
+        materials.preload();
+
+        let objLoader = new THREE.OBJLoader();
+        objLoader.setMaterials( materials );
+        objLoader.setPath( '../assets/model/obj/' );
+        objLoader.load( 'eyeball.obj', function ( object ) {
+
+            mesh = object;
+            mesh.position.y = -50;
+            scene.add( mesh );
+
+        } );
+
+    } )
+
+     */
+
+
     // Render
     render = function () {
         requestAnimationFrame(render);
+        if (obj != null) {
+            obj.rotation.y += 0.01;
+        }
         controls.update();
         renderer.render(scene, camera);
     }

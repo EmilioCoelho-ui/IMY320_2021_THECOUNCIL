@@ -143,3 +143,7 @@ div#header:after
     font-size: 3em;
     padding: 70px;
 }
+
+.gif img{
+    width: 100%;
+}
