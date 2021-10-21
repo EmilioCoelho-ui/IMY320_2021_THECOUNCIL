@@ -29,7 +29,7 @@ function main() {
     // larger the number the further away it is
     camera.position.y = 1;
     camera.position.z = 1;
-    camera.position.x = 10;
+    camera.position.x = 3;
 
     // Canvas
     myCanvas = document.getElementById("myCanvas");
@@ -47,38 +47,23 @@ function main() {
     scene.add(light);
 
     // Texture
-    let texture1 = new THREE.TextureLoader().load('../assets/model/obj/textures/Eye_D.jpg');
-    let texture2 = new THREE.TextureLoader().load('../assets/model/obj/textures/Eye_N.jpg');
-    let texture3 = new THREE.TextureLoader().load('../assets/model/obj/textures/REF 1.jpg');
-    //const textures  = [texture1, texture2, texture3];
+    let texture = new THREE.TextureLoader().load('../assets/model/skull/texture.jpg');
 
 
     // Object loader
-    let mat;
-    let mtlLoader = new THREE.MTLLoader();
-    mtlLoader.load(
-        '../assets/model/obj/eyeball.mtl',
-        function ( materials ) {
-            materials.preload();
-            mat = materials;
-        }
-    );
-
     loader = new THREE.OBJLoader();
-    loader.setMaterials(mat);
     loader.load(
-        '../assets/model/obj/eyeball.obj',
+        '../assets/model/skull/craneo.OBJ',
         function ( object ) {
             obj = object;
 
-            /*
+
             object.traverse( function ( child ) {
                 if ( child.isMesh ) {
-                    child.material.map = texture1; // assign your diffuse texture here
+                    child.material.map = texture; // assign your diffuse texture here
                 }
             } );
 
-             */
 
             scene.add( object );
         },
@@ -92,33 +77,6 @@ function main() {
             console.log( error);
         }
     );
-
-
-
-    /*
-    let mesh = null;
-
-    let mtlLoader = new THREE.MTLLoader();
-    mtlLoader.setPath( '../assets/model/obj/' );
-    mtlLoader.load( 'eyeball.mtl', function( materials ) {
-
-        materials.preload();
-
-        let objLoader = new THREE.OBJLoader();
-        objLoader.setMaterials( materials );
-        objLoader.setPath( '../assets/model/obj/' );
-        objLoader.load( 'eyeball.obj', function ( object ) {
-
-            mesh = object;
-            mesh.position.y = -50;
-            scene.add( mesh );
-
-        } );
-
-    } )
-
-     */
-
 
     // Render
     render = function () {
