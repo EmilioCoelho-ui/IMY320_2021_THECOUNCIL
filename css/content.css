@@ -59,12 +59,18 @@ body {
 .grid-container {
     margin: auto;
     display: grid;
+    /*
     padding: 20px;
+
+     */
     grid-row-gap: 50px;
     grid-column-gap: 20px;
     grid-template-columns: auto auto;
+    /*
     height: 500px;
     width: 800px;
+
+     */
 }
 
 .grid-item {
@@ -73,7 +79,7 @@ body {
 }
 
 .safe-circle {
-    padding: 50px;
+    padding: 250px;
     /*
     height: device-width;
     */
@@ -81,7 +87,7 @@ body {
     border-radius: 50%;
     background-color: whitesmoke;
     margin: auto;
-    margin-top: 20px;
+    text-align: center;
 }
 
 .container-handle {
