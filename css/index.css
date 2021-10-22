@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    height: 100%;
+    background-color: #151a21;
+    /*
+    background-image: url('../img/galaxy-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+     */
+}
+
+div#header
+{
+    display:inline-block;
+    width:auto;
+    height:20px;
+    padding:5px 20px 5px 10px;
+    background:none #3476A9;
+    position:relative;
+    overflow:visible;
+}
+div#header:after
+{
+    content:'';
+    display:block;
+    width:20px;
+    height:30px;
+    position:absolute;
+    top:0;
+    right:-5px;
+
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #1f2124;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    position: relative;
+}
+
+.sidenav a:hover {
+    color: gold;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/*Imported fonts*/
+@font-face {
+    font-family: 'Azeret';
+    src: url(../fonts/AzeretMono-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Marker';
+    src: url(../fonts/PermanentMarker-Regular.ttf);
+}
+
+
+
+.navbar {
+    color: gold;
+    font-size: 60px;
+    /*
+    font-family: 'Azeret';
+    */
+    background-color: #1f2124;
+    top: 0;
+    width: 100%;
+    position: fixed;
+}
+
+.burger-menu {
+    /*font-size: 70px;*/
+    float: left;
+    margin: auto;
+    padding: 15px;
+}
+
+.burger-menu:hover {
+    cursor: pointer;
+}
+
+.text {
+    /*float: right;*/
+    text-align: center;
+}
+
+/******************* AOS SCROLL ANIMATION ********************/
+* {
+    box-sizing: border-box;
+}
+
+.item {
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    padding-top: 75px;
+    background: #ccc;
+    text-align: center;
+    color: #FFF;
+    font-size: 3em;
+}
+
+.landing-text {
+    text-align: center;
+    color: gold;
+    height: 200px;
+    font-family: Tahoma ;
+    font-size: 3em;
+    margin: auto;
+    padding: 80px;
+}
+
+.gif img{
+    height: 100%;
+    width: 100%;
+}
+
+.canvas {
+    margin: auto;
+    text-align: center;
+}
+
+#trailer {
+    text-align: center;
+    padding: 100px;
+}
+
+iframe {
+    width: 1200px;
+    height: 600px;
+}

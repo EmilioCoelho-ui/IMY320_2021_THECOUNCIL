@@ -5,11 +5,8 @@
     <meta name="viewport" content= "width=device-width, initial-scale=1.0">
     <title>The Council</title>
 
-    <link rel="stylesheet" href="css/content.css">
-
-    <style>
-
-    </style>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
 </head>
 <body>
 
@@ -38,10 +35,57 @@
         THE COUNCIL
     </div>
 </div>
+<div class="landing-text">
+    <p>
+        A self-made content creation company with a speciality for
+        all things horror.
+    </p>
+</div>
+
+<div id="trailer">
+    <iframe
+            src="https://www.youtube.com/embed/OzdigZJZKRg">
+    </iframe>
+</div>
 
 
+<!--
+<div class="gif"  data-aos="zoom-in">
+    <img src="assets/giphy.gif" alt="beware"/>
+</div>
+-->
 
-<script src="js/content.js"></script>
+<div class="canvas" onload="main()">
+    <canvas id="myCanvas"></canvas>
+</div>
+
+<!--
+<div class="item" data-aos="fade-up">1</div>
+<div class="item" data-aos="fade-down">2</div>
+<div class="item" data-aos="fade-right">3</div>
+<div class="item" data-aos="fade-left">4</div>
+
+<div class="item" data-aos="zoom-in">5</div>
+<div class="item" data-aos="zoom-out">6</div>
+
+<div class="item" data-aos="slide-up">7</div>
+
+<div class="item" data-aos="flip-up">8</div>
+<div class="item" data-aos="flip-down">9</div>
+<div class="item" data-aos="flip-right">10</div>
+<div class="item" data-aos="flip-left">11</div>
+
+-->
+
+<!-- ThreeJS Script tags -->
+<script src="https://threejs.org/build/three.js"></script>
+<script src="https://threejs.org/examples/js/loaders/MTLLoader.js"></script>
+<script src="https://threejs.org/examples/js/loaders/OBJLoader.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+<script src="js/controls.js"></script>
+
+<script src="node_modules/aos/dist/aos.js"></script>
+<script src="js/index.js"></script>
 
 
 </body>
