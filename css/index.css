@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: black;
+    background-color: white;
     /*
     background-image: url('../img/safe.jpg');
     background-repeat: no-repeat;
@@ -135,11 +135,13 @@ div#header:after
     background-image: url('../img/safe.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
+    /*
     background-size: 70% 100%;
+     */
     background-position: center;
     text-align: center;
     color: gold;
-    height: 500px;
+    height: 100%;
     font-size: 3em;
     padding: 70px;
 }
