@@ -1,11 +1,13 @@
 body {
     margin: 0;
     height: 100%;
-    background-color: white;
+    background-color: #151a21;
+    /*
     background-image: url('../img/galaxy-background.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+     */
 }
 
 div#header
@@ -53,6 +55,7 @@ div#header:after
     color: #818181;
     display: block;
     transition: 0.3s;
+    position: relative;
 }
 
 .sidenav a:hover {
@@ -94,6 +97,7 @@ div#header:after
     background-color: #1f2124;
     top: 0;
     width: 100%;
+    position: fixed;
 }
 
 .burger-menu {
@@ -131,12 +135,19 @@ div#header:after
 .landing-text {
     text-align: center;
     color: gold;
-    height: 100%;
+    height: 200px;
+    font-family: Tahoma ;
     font-size: 3em;
     margin: auto;
+    padding: 80px;
 }
 
 .gif img{
     height: 100%;
     width: 100%;
+}
+
+.canvas {
+    margin: auto;
+    text-align: center;
 }

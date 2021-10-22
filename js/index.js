@@ -35,7 +35,7 @@ function main() {
     myCanvas = document.getElementById("myCanvas");
 
     // Renderer
-    renderer = new THREE.WebGLRenderer({canvas: myCanvas});
+    renderer = new THREE.WebGLRenderer({canvas: myCanvas, alpha: true  });
     renderer.setSize( 800 , 500 );
 
     // Controls
