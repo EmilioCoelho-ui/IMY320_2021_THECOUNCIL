@@ -96,7 +96,8 @@ div#header:after
     /*
     font-family: Azeret;
     */
-    background-color: #1f2124;
+    /*background-color: #1f2124;*/
+    background-color: #000000;
     top: 0px;
     width: 100%;
 }
