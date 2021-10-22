@@ -36,7 +36,7 @@ function main() {
 
     // Renderer
     renderer = new THREE.WebGLRenderer({canvas: myCanvas});
-    renderer.setSize( window.innerWidth, 500 );
+    renderer.setSize( 800 , 500 );
 
     // Controls
     controls = new THREE.OrbitControls(camera, renderer.domElement);

@@ -1,14 +1,11 @@
 body {
     margin: 0;
+    height: 100%;
     background-color: white;
-    /*
-    background-image: url('../img/safe.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 70% 100%;
+    background-image: url('../img/galaxy-background.jpg');
     background-position: center;
-
-     */
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 div#header
@@ -131,21 +128,15 @@ div#header:after
     font-size: 3em;
 }
 
-.image {
-    background-image: url('../img/safe.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    /*
-    background-size: 70% 100%;
-     */
-    background-position: center;
+.landing-text {
     text-align: center;
     color: gold;
     height: 100%;
     font-size: 3em;
-    padding: 70px;
+    margin: auto;
 }
 
 .gif img{
+    height: 100%;
     width: 100%;
 }
