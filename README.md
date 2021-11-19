@@ -4,7 +4,7 @@
 This repository is for The Council group for IMY 320 of the year 2021.
 
 # Website Link:
-https://imy320.000webhostapp.com/
+https://thecouncil2021imy3.wixsite.com/the-council
 
 # Contact us:
 thecouncil.2021.imy320@gmail.com
